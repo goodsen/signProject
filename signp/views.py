@@ -13,4 +13,4 @@ def login_action(request):
         if username == 'admin' and password == 'admin123':
             return HttpResponse('登录成功')
         else:
-            return render(request,'index.html'),{'error':'username or password error!'}
+            return render(request,'index.html',{'error':'username or password error!'})

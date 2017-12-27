@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Django page</title>
-    <link rel="stylesheet" type="text/css" href="Login.css"/>
 </head>
-    <body bgcolor="#3399ff">
+<body bgcolor="#3399ff">
 
     <h1>gzs登录界面</h1>
     <form  method="post" action="/login_action/">
-        <input id="username" type ="text" placeholder="邮箱或手机号">
-        <br/><br/>
-        <input id="password" type="password" placeholder="密码">
-        <br/><br/>
+        <input id="username" type ="text" placeholder="邮箱或手机号"><br/>
+        <input id="password" type="password" placeholder="密码"><br/>
+        {{error}}<br/>
         <button id = "btn" type="submit">登录</button>
         {% csrf_token %}
     </form>
